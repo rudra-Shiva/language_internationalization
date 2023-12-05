@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_flavor/flutter_flavor.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+
 import 'app/env_constant.dart';
 import 'app/environment_enum.dart';
+import 'common/navigation/routes.dart';
+import 'common/navigation/routesList.dart';
+import 'common/themes/language_themedata.dart';
 
 class LanguageApp extends StatefulWidget {
   const LanguageApp({super.key});
@@ -36,27 +40,25 @@ class _LanguageAppState extends State<LanguageApp> {
                   // locale: locale,
                   // initialRoute: RouteList.initialRoute,
                   // onGenerateRoute: Routes.getRoutes,
-                  //title: env.appTitle,
+                  // title: env.appTitle,
                 ),
               );
             } else {
-              return const FlavorBanner(
+              return FlavorBanner(
                 location: BannerLocation.bottomEnd,
-                color: Colors.blue,
+                color: Colors.redAccent,
                 child: SafeArea(
                   bottom: false,
                   child: MaterialApp(
-                    color: Colors.cyan,
-
                     // navigatorObservers: [ChuckerFlutter.navigatorObserver],
                     // navigatorKey: CSKeys.materialNavKey,
-                    // theme: CSThemeData.lightTheme,
+                    theme: LanguageThemeData.lightTheme,
                     debugShowCheckedModeBanner: false,
                     // localizationsDelegates: AppLocalizations.localizationsDelegates,
                     // supportedLocales: AppLocalizations.supportedLocales,
                     // locale: locale,
-                    // initialRoute: RouteList.initialRoute,
-                    // onGenerateRoute: Routes.getRoutes,
+                    initialRoute: RouteList.initialRoute,
+                    onGenerateRoute: Routes.getRoutes,
                   ),
                 ),
               );
