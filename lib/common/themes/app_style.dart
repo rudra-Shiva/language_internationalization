@@ -1,9 +1,11 @@
-import 'package:cslosmobile/common/ui/res/dimen.dart';
-import 'package:cslosmobile/common/ui/theme/app_color.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pinput/pinput.dart';
+
+import '../ui/res/dimen.dart';
+import 'app_color.dart';
+
 
 class AppStyle {
   const AppStyle._();
@@ -206,19 +208,7 @@ class AppStyle {
     );
   }
 
-    static final defaultPinTheme = PinTheme(
-    width: 55,
-    height: 55,
-    textStyle: const TextStyle(
-      fontSize: 20,
-      color: AppColor.cSBlueColor8,
-    ),
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(8),
-      border: Border.all(color: AppColor.transparent),
-      color: AppColor.greyColor25,
-    ),
-  );
+
 
 }
 
